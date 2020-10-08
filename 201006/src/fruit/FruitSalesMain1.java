@@ -10,10 +10,16 @@ public class FruitSalesMain1 {
 		seller=new FruitSeller();
 		buyer=new FruitBuyer();
 		
+		FruitSeller seller2=new FruitSeller(seller);
+		
 		buyer.buyApple(seller, 2000);
 		
 		System.out.println("판매자의 현재 지표");
 		seller.showSaleResult();
+		
+		System.out.println("======================");
+		System.out.println("판매자2의 현재 지표");
+		seller2.showSaleResult();
 		
 		System.out.println("======================");
 		
@@ -23,5 +29,6 @@ public class FruitSalesMain1 {
 		
 
 	}
+
 
 }

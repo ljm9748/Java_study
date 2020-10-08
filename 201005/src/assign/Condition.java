@@ -16,7 +16,7 @@ public class Condition {
 		if (score<0) System.out.println("0미만입니다");
 		else if (score<100) System.out.println("0이상 100미만입니다");
 		else if (score<200) System.out.println("100이상 200미만입니다");
-		else if (score<300) System.out.println("200이상 300미만입니다");
+		else if (score<300) System.out.println("200이상 300미만입니다"); 
 		else System.out.println("300이상입니다");
 
 		
@@ -69,7 +69,7 @@ public class Condition {
 			}
 		}
 		
-		//문제6
+		//문제6 
 		num=1;
 		int sum=0;
 		while(num<100) {

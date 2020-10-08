@@ -9,7 +9,4 @@ public class Child {
 		marble += getMarble;
 		
 	}
-	
-	
-
 }
