@@ -59,7 +59,7 @@ public class PhoneBookManager {
 		//입력
 		System.out.println("정보 검색을 시작합니다");
 		System.out.println("찾고자하는 입력을 입력해 주세요 : ");
-		String name= sc.nextLine();
+		String name= Util.sc.nextLine();
 		
 		int index = -1; //찾고자하는 인덱스
 		
@@ -89,7 +89,7 @@ public class PhoneBookManager {
 		System.out.println("정보삭제를 진행합니다");
 		System.out.println("삭제하고싶은 이름을 입력하세요: ");
 		
-		String name= sc.nextLine();
+		String name= Util.sc.nextLine();
 		
 		int index = -1; //찾고자하는 인덱스
 		
