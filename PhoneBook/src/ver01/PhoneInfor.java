@@ -1,7 +1,6 @@
 package ver01;
 
 public class PhoneInfor {
-	String data[]=new String[3];
 	
 	String name;
 	String phoneNumber;
@@ -12,9 +11,6 @@ public class PhoneInfor {
 		this(name, "", birthday);
 	}
 	PhoneInfor(String name, String phoneNumber, String birthday) {
-		data[0]=name;
-		data[1]=phoneNumber;
-		data[2]=birthday;
 		this.name=name;
 		this.phoneNumber=phoneNumber;
 		this.birthday=birthday;
