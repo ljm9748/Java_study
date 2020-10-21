@@ -21,9 +21,9 @@ public class InterfaceMarking {
 
 interface UpperCasePrintable{
 	
-}
+}//비어있는거 놔도됨 (마킹의 효과)
 
-class PointOne implements UpperCasePrintable{
+class PointOne implements UpperCasePrintable{ 
 	private int xPos;
 	private int yPos;
 	

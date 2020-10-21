@@ -12,7 +12,7 @@ public class FriendInfoMain {
 		
 		while(true) {
 			System.out.println("*** 메뉴 선택  ***");
-			System.out.println("1. 고교 친구 정보 저장");
+			System.out.println(Menu.INSERT_HIGH+". 고교 친구 정보 저장");//이 형식도 가능
 			System.out.println("2. 대학 친구 정보 저장");
 			System.out.println("3. 전체 정보 출력");
 			System.out.println("4. 기본 정보 출력");
@@ -21,16 +21,16 @@ public class FriendInfoMain {
 			
 			int choice = sc.nextInt();
 			switch(choice) {
-			case 1: case 2:
+			case Menu.INSERT_HIGH: case Menu.INSERT_UNIV:
 				handler.addFriends(choice);
 				break;
-			case 3:
+			case Menu.SHOW_ALL:
 				handler.showAllData();
 				break;
-			case 4:
+			case Menu.SHOW_BASEIC:
 				handler.showAllSimpleData();
 				break;
-			case 5:
+			case Menu.EXIT:
 				break;
 			default:
 				System.out.println("1~5중에 선택해 주세요");
