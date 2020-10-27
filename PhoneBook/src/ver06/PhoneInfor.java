@@ -1,4 +1,4 @@
-package ver05;
+package ver06;
 
 public abstract class PhoneInfor implements Infor { //extends object
 	//캡슐화: 정보은닉(변수 직접접근 제한-변수보호)
