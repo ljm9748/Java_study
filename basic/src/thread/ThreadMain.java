@@ -4,6 +4,35 @@ public class ThreadMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		ShowThread st1= new ShowThread("1번");
+		ShowThread st2= new ShowThread("2번");
+		
+		//runnable 인터페이스 이용한 thread
+		Runnable target = new ShowRunnable();
+		Thread st3= new Thread(target);
+		
+		//우선순위 결정 1~10 : 기본 5
+		System.out.println(Thread.MAX_PRIORITY);
+		System.out.println(Thread.MIN_PRIORITY);
+		st1.setPriority(Thread.MAX_PRIORITY);
+		
+		
+		st1.start();
+		st2.start();
+		st3.start();
+		
+//		for (int i = 0; i < 100; i++) {
+//			System.out.println("안녕하세요 메인스레드 입니다.");
+//			try {
+//				Thread.sleep(100);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			
+//		}
+//		
+//		System.out.println("메인 스레드가 종료되었습니다.");
 
 	}
 
