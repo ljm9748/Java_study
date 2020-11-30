@@ -28,14 +28,11 @@ public class DeptManager {
 		Dept dept = new Dept(Integer.parseInt(deptno), dname, loc);
 		
 		Connection conn = null;
-		
-		String jdbcUrl="jdbc:mysql://localhost:3306/project?serverTimezone=UTC";
-		String user= "bit";
-		String password="bit";
+
 		
 		int resultCnt=0;
 		try {
-			conn= DriverManager.getConnection(jdbcUrl, user, password);
+			conn= ConnectionProvider.getConnection();
 			resultCnt=dao.insertDept(dept, conn);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -60,13 +57,10 @@ public class DeptManager {
 		Dept dept = new Dept(Integer.parseInt(deptno), dname, loc);
 		
 		Connection conn = null;
-		String jdbcUrl="jdbc:mysql://localhost:3306/project?serverTimezone=UTC";
-		String user= "bit";
-		String password="bit";
-		
+
 		int resultCnt=0;
 		try {
-			conn= DriverManager.getConnection(jdbcUrl, user, password);
+			conn= ConnectionProvider.getConnection();
 			resultCnt=dao.updateDept(dept, conn);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -85,13 +79,10 @@ public class DeptManager {
 		//Dept dept = new Dept(Integer.parseInt(deptno), dname, loc);
 		
 		Connection conn = null;
-		String jdbcUrl="jdbc:mysql://localhost:3306/project?serverTimezone=UTC";
-		String user= "bit";
-		String password="bit";
 		
 		int resultCnt=0;
 		try {
-			conn= DriverManager.getConnection(jdbcUrl, user, password);
+			conn= ConnectionProvider.getConnection();
 			resultCnt=dao.deleteDept(Integer.parseInt(deptno), conn);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -107,13 +98,10 @@ public class DeptManager {
 		//Dept dept = new Dept(Integer.parseInt(deptno), dname, loc);
 		
 		Connection conn = null;
-		String jdbcUrl="jdbc:mysql://localhost:3306/project?serverTimezone=UTC";
-		String user= "bit";
-		String password="bit";
 		List<Dept> list = null;
 		int resultCnt=0;
 		try {
-			conn= DriverManager.getConnection(jdbcUrl, user, password);
+			conn= ConnectionProvider.getConnection();
 			list = dao.listDept(conn);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -137,15 +125,10 @@ public class DeptManager {
 
 		
 		Connection conn = null;
-		
-		String jdbcUrl="jdbc:mysql://localhost:3306/project?serverTimezone=UTC";
-		String user= "bit";
-		String password="bit";
-		
 
 		Dept dept= null;
 		try {
-			conn= DriverManager.getConnection(jdbcUrl, user, password);
+			conn= ConnectionProvider.getConnection();
 			dept=dao.searchDept(Integer.parseInt(deptno), conn);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

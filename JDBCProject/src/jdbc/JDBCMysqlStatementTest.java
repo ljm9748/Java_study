@@ -59,7 +59,7 @@ public class JDBCMysqlStatementTest {
 			stmt.close();
 		
 			
-			//conn.close();
+			conn.close();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.out.println("드라이버 로드 실패");
